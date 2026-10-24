@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMP STORE | FiveM Assets</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo" id="homeLogo">
+            VAMP LA <span>STORE</span>
+        </a>
+
+        <nav>
+            <a href="#" id="homeLink">HOME</a>
+            <a href="#products" id="productsLink">PRODUCTS</a>
+
+            <a href="https://discord.gg/eyESaX4FGg"
+               id="discordLink"
+               target="_blank"
+               rel="noopener noreferrer">DISCORD</a>
+
+        </nav>
+    </header>
+
+    <main id="homePage">
+        <section class="hero">
+            <h1 class="hero-title">
+                VAMP <span>LA</span>
+            </h1>
+        </section>
+
+        <section class="shop" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Featured Products</h2>
+                </div>
+                <input id="searchInput" type="search"
+                       placeholder="Search products...">
+            </div>
+
+            <div class="shop-layout">
+                <aside class="sidebar">
+                    <h3>CATEGORIES</h3>
+                    <div id="categories"></div>
+                    <div class="sidebar-info">
+                        <h4>VAMP LA DISCORD</h4>
+                        <p>購入・お問い合わせは Discord のチケットからお願いします。</p>
+
+                        <a href="https://discord.gg/eyESaX4FGg"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="discord-btn">
+                            Discordに参加
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <main id="detailPage" class="detail-page hidden">
+        <button id="backButton" class="back-btn">← Back to shop</button>
+        <div id="productDetail"></div>
+    </main>
+
+    <footer>
+        <strong>VAMP LA <span>STORE</span></strong>
+        <p>© 2026 VAMP STORE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

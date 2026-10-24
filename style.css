@@ -1,0 +1,512 @@
+
+:root {
+    --bg: #080b10;
+    --panel: #111720;
+    --panel-hover: #18222d;
+    --border: #26323f;
+    --accent: #00c8ff;
+    --text: #f2f7fc;
+    --muted: #8b9baa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header {
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b1017;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+    .logo span, footer span {
+        color: var(--accent);
+    }
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+    nav a {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--muted);
+        transition: color .2s;
+    }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+.hero {
+    min-height: 430px;
+    padding: 100px 7%;
+    background: radial-gradient(ellipse at 75% 30%, #064c63 0%, transparent 48%), linear-gradient(130deg, #111d29, #080b10 70%);
+}
+
+.hero-label, .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    font-size: clamp(34px, 5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+    .hero h1 span {
+        color: var(--accent);
+    }
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 32px;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 14px 26px;
+    background: var(--accent);
+    color: #061018;
+    font-weight: 800;
+    border: 0;
+    border-radius: 6px;
+}
+
+    .primary-btn:hover {
+        background: #5cdeff;
+    }
+
+.shop {
+    padding: 65px 7% 100px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+    .section-heading h2 {
+        font-size: 30px;
+        margin: 10px 0 0;
+    }
+
+#searchInput {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: white;
+    padding: 13px 16px;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 25px;
+}
+
+.sidebar {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+    align-self: start;
+}
+
+    .sidebar h3 {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+.category-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 13px;
+    margin: 5px 0;
+    background: transparent;
+    border: 0;
+    border-radius: 5px;
+    color: var(--muted);
+}
+
+    .category-btn:hover, .category-btn.active {
+        color: var(--accent);
+        background: #083043;
+    }
+
+.sidebar-info {
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+}
+
+    .sidebar-info p {
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    overflow: hidden;
+    transition: transform .2s, border-color .2s;
+    cursor: pointer;
+}
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+    }
+
+.product-image {
+    height: 190px;
+    background: linear-gradient(135deg, #122638, #06151e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-category {
+    color: var(--accent);
+    font-size: 11px;
+}
+
+.product-content h3 {
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.product-price {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.view-btn {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    text-align: center;
+    background: #173445;
+    color: var(--accent);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.detail-page {
+    min-height: 70vh;
+    padding: 55px 7%;
+}
+
+.back-btn {
+    background: none;
+    border: 0;
+    color: var(--accent);
+    margin-bottom: 35px;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.detail-image {
+    min-height: 360px;
+    background: linear-gradient(135deg, #123449, #071018);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 110px;
+}
+
+.detail-info h1 {
+    font-size: 38px;
+}
+
+.detail-info p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.detail-price {
+    font-size: 30px;
+    color: var(--accent);
+    font-weight: 900;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+    footer strong {
+        color: white;
+    }
+
+@media (max-width: 950px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-layout {
+        grid-template-columns: 180px 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+        nav a {
+            font-size: 11px;
+        }
+
+    .hero {
+        padding: 75px 5%;
+    }
+
+    .shop {
+        padding: 45px 5%;
+    }
+
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .product-image {
+        height: 130px;
+        font-size: 45px;
+    }
+
+    .product-content {
+        padding: 12px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+    .product-image {
+        overflow: hidden;
+}
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .detail-image img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+        display: block;
+    }
+    .product-image {
+        height: 165px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .detail-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+/* 商品カード全体 */
+.product-card {
+    background: #0e141c;
+    border: 1px solid #25303d;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+/* 商品画像の表示エリア */
+.product-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0e141c;
+}
+
+    /* 画像を全体表示 */
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+/* 商品情報 */
+.product-content {
+    padding: 15px;
+}
+
+    /* 商品名 */
+    .product-content h3 {
+        font-size: 15px;
+        margin: 0 0 10px;
+        color: #ffffff;
+    }
+
+/* 価格 */
+.product-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+/* 詳細ボタン */
+.view-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    text-align: center;
+    background: #4cc9f0;
+    color: #071018;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* VAMP LA メイン画面 */
+.hero {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient( ellipse at 65% 20%, rgba(0, 190, 230, 0.25), transparent 60% ), linear-gradient( 135deg, #101c2b, #050b12 );
+}
+
+.hero-title {
+    margin: 0;
+    font-size: clamp(55px, 8vw, 110px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+    .hero-title span {
+        color: #00c8f8;
+    }
+.discord-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 12px;
+    background: #5865F2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+    .discord-btn:hover {
+        background: #4752C4;
+    }

@@ -15,7 +15,7 @@ const products = [
         price: 8000,
         image: "image/vehicle.png",
         description: "個人武器導入。"
-    }
+    },
     {
        id: 3,
         name: "Tier1 Drug",

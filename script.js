@@ -2,14 +2,22 @@
 const products = [
     {
         id: 1,
+        name: "オープン記念 個人武器＋100発武器アップグレード",
+        category: "武器",
+        price: 10000,
+        image: "./image/clothing.png",
+        description: "サーバーオープン記念の格安のものになっております。"
+    },
+      {
+        id: 2,
         name: "個人武器追加",
         category: "武器",
         price: 8000,
-        image: "./image/clothing.png",
+        image: "image/vehicle.png",
         description: "個人武器導入。"
-    },
+    }
     {
-       id: 2,
+       id: 3,
         name: "Tier1 Drug",
         category: "薬",
         price: 2000,
@@ -17,7 +25,7 @@ const products = [
         description: "Tier1 Drug導入"
     },
     {
-        id: 3,
+        id: 4,
         name: "服×1",
         category: "服",
         price: 2000,
@@ -25,7 +33,7 @@ const products = [
         description: "服×1導入。"
     },
     {
-        id: 4,
+        id: 5,
         name: "60発武器アップグレード",
         category: "武器",
         price: 3000,
@@ -33,7 +41,7 @@ const products = [
         description: "個人武器に装填できるマガジンアップグレードです。"
     },
     {
-        id: 5,
+        id: 6,
         name: "Max Drug",
         category: "薬",
         price: 4000,
@@ -41,7 +49,7 @@ const products = [
         description: "回復量がTier1より多いです。"
     },
     {
-        id: 6,
+        id: 7,
         name: "80発武器アップグレード",
         category: "武器",
         price: 4000,
@@ -50,7 +58,7 @@ const products = [
     },
     
     {
-        id: 7,
+        id: 8,
         name: "100発武器アップグレード",
         category: "武器",
         price: 5000,
@@ -58,7 +66,7 @@ const products = [
         description: "個人武器に装填できるマガジンアップグレードです。"
     },
     {
-        id: 8,
+        id: 9,
         name: "200発武器アップグレード",
         category: "武器",
         price: 6000,
@@ -66,7 +74,7 @@ const products = [
         description: "個人武器に装填できるマガジンアップグレードです。"
     },
     {
-        id: 9,
+        id: 10,
         name: "チャットタグunban",
         category: "unban",
         price: 3500,
@@ -74,7 +82,7 @@ const products = [
         description: "詳細はDiscordチケットまで。"
     },
     {
-        id: 10,
+        id: 11,
         name: "Tier1",
         category: "ギャング",
         price: 4500,
@@ -82,7 +90,7 @@ const products = [
         description: "服2着＋ギャングストライキ5"
     },
     {
-        id: 11,
+        id: 12,
         name: "Tier2",
         category: "ギャング",
         price: 7500,
@@ -90,7 +98,7 @@ const products = [
         description: "服4着＋ギャングストライキ7"
     },
     {
-        id: 12,
+        id: 13,
         name: "Tier3",
         category: "ギャング",
         price: 10000,
@@ -98,7 +106,7 @@ const products = [
         description: "服4着＋ギャング武器＋ギャングストライキ10"
     },
     {
-        id: 13,
+        id: 14,
         name: "チャットタグ＋TX No clip",
         category: "Chat tag",
         price: 8000,
@@ -106,7 +114,7 @@ const products = [
         description: "VAMP LAで使えるオリジナルチャットタグ＋TX No clip"
     },
     {
-        id: 14,
+        id: 15,
         name: "チャットタグ＋No clip",
         category: "Chat tag",
         price: 4000,
@@ -114,7 +122,7 @@ const products = [
         description: "VAMP LAで使えるオリジナルチャットタグ＋Basic No clip"
     },
     {
-        id: 15,
+        id: 16,
         name: "アップグレード",
         category: "Chat tag",
         price: 4000,
@@ -122,7 +130,7 @@ const products = [
         description: "Basic No clipからTX Noclipにアップグレード可能です。"
     },
     {
-        id: 16,
+        id: 17,
         name: "チーターunban",
         category: "unban",
         price: 5000,
@@ -130,7 +138,7 @@ const products = [
         description: "BANされた人がもう一度サーバーに接続できるものです。"
     },
       {
-        id: 17,
+        id: 18,
         name: "ブラックリスト解除",
         category: "unban",
         price: 10000,
@@ -138,7 +146,7 @@ const products = [
         description: "ブラックリストにされた人がもう一度サーバーに接続できるものです。"
     },
     {
-        id: 18,
+        id: 19,
         name: "服×5",
         category: "服",
         price: 7500,
@@ -146,7 +154,7 @@ const products = [
         description: "服5着導入できるセット商品です。"
     },
     {
-        id: 19,
+        id: 20,
         name: "服作成依頼＋導入×1",
         category: "服",
         price: 3500,
@@ -154,12 +162,20 @@ const products = [
         description: "Clothing Creatorに依頼ができ導入までできるものです。"
     },
      {
-        id: 20,
-        name: "オープン記念 個人武器＋100発武器アップグレード",
+        id: 21,
+        name: "リバンプ",
         category: "武器",
-        price: 10000,
+        price: 8000,
         image: "image/product20.png",
-        description: "サーバーオープン記念の格安のものになっております。"
+        description: "既存武器の編集。"
+    },
+    {
+        id: 22,
+        name: "ワイプ",
+        category: "武器",
+        price: 5000,
+        image: "image/product20.png",
+        description: "既存武器をinventoryから削除"
     }
 ];
 
